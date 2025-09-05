@@ -11,6 +11,7 @@ import gif9 from '../gifs/naruto e GIF.gif'
 
 const Characters = () => {
   return (
+    
     <div className="p-4">
       {/* Title */}
       <h1 className="text-3xl font-bold text-center text-orange-600 mb-6">
