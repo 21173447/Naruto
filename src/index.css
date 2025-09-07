@@ -1,2 +1,47 @@
 @import "tailwindcss";
 
+@keyframes bounce-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-bounce-float {
+  animation: bounce-float 3s ease-in-out infinite;
+}
+
+/* Renamed this float keyframes to avoid conflict with bounce-float */
+@keyframes float-animation {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float-animation 3s ease-in-out infinite;
+}
+
+@keyframes scroll-credits {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
+}
+
+.animate-scroll-credits {
+  animation: scroll-credits 60s linear infinite;
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes ink-drip {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-ink-drip {
+  animation: ink-drip 1s ease-in-out forwards;
+}

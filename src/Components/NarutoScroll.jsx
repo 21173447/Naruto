@@ -1,43 +1,70 @@
 import React from "react";
 
+const jutsus = [
+  { name: "螺旋丸", romaji: "Rasengan", description: "Spiraling Sphere" },
+  { name: "千鳥", romaji: "Chidori", description: "One Thousand Birds" },
+  { name: "影分身の術", romaji: "Kage Bunshin no Jutsu", description: "Shadow Clone Technique" },
+  { name: "火遁・豪火球の術", romaji: "Katon: Gōkakyū no Jutsu", description: "Fire Style: Fireball Jutsu" },
+  { name: "封印術", romaji: "Fūinjutsu", description: "Sealing Technique" },
+  { name: "水遁・水龍弾の術", romaji: "Suiton: Suiryūdan no Jutsu", description: "Water Style: Water Dragon Bullet Technique" },
+  { name: "風遁・螺旋手裏剣", romaji: "Fūton: Rasenshuriken", description: "Wind Style: Spiraling Shuriken" },
+  { name: "幻術・砂牢", romaji: "Genjutsu: Suna Rō", description: "Illusion: Sand Prison" }
+];
+
 const NarutoScroll = () => {
   return (
-    <div className="w-full bg-gray-900 py-12 relative overflow-hidden"> 
-      {/* Outer container with dark ninja background */}
-      
-      {/* Decorative blurred circles */}
+    <div className="min-h-screen bg-ninja-night relative overflow-hidden">
+
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 -left-32 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 -right-32 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        {[...Array(8)].map((_, i) => (
+          <div
+            key={i}
+            className={`absolute w-32 h-32 rounded-full opacity-60 ${i % 2 === 0 ? "ember-glow" : "flame-glow"} animate-float`}
+            style={{
+              top: `${Math.random() * 80}%`,
+              left: `${Math.random() * 80}%`,
+              animationDelay: `${Math.random() * 2}s`,
+              animationDuration: `${3 + Math.random() * 2}s`
+            }}
+          />
+        ))}
       </div>
 
-      <div className="relative w-full max-w-6xl mx-auto">
-        {/* Top border and corner dots */}
-        <div className="absolute -top-4 left-8 right-8 pointer-events-none">
-          <div className="h-2 rounded-full bg-neutral-800 shadow-lg" />
-        </div>
-        <div className="absolute -top-5 left-0 h-5 w-5 rounded-full border-2 border-neutral-800 bg-red-700 shadow-lg pointer-events-none" />
-        <div className="absolute -top-5 right-0 h-5 w-5 rounded-full border-2 border-neutral-800 bg-red-700 shadow-lg pointer-events-none" />
+   
+      <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-ninja-ember/5 to-ninja-purple/5 pointer-events-none"></div>
 
-        {/* Scroll content */}
-        <div className="relative w-full rounded-[20px] border-8 border-amber-800/70 bg-amber-100 py-6 px-8 shadow-[inset_0_0_15px_rgba(0,0,0,0.25)]">
-          <div
-            className="text-center text-lg md:text-2xl font-bold uppercase tracking-wider text-neutral-900 space-y-3"
-            style={{ fontFamily: "NarutoFont" }}
-          >
-            <p>Rasengan – 螺旋丸</p>
-            <p>Chidori – 千鳥</p>
-            <p>Shadow Clone Jutsu – 影分身の術</p>
-            <p>Fireball Jutsu – 火遁・豪火球の術</p>
+      <div className="relative max-w-4xl mx-auto px-8">
+
+        <div className="text-center mb-8 animate-ink-drip">
+          <h1 className="font-ninja text-4xl md:text-5xl text-ninja-gold text-shadow mb-2">
+            古忍術書
+          </h1>
+          <p className="font-japanese text-lg text-ninja-parchment/80">Ancient Ninja Techniques</p>
+        </div>
+
+     
+        <div className="relative overflow-hidden h-[70vh]">
+          <div className="animate-scroll-credits">
+            {jutsus.concat(jutsus).map((jutsu, index) => (
+              <div
+                key={index}
+                className="text-center space-y-2 mb-6"
+              >
+                <h2 className="text-ninja-ember font-bold text-2xl md:text-3xl">{jutsu.name}</h2>
+                <p className="text-lg font-japanese">{jutsu.romaji}</p>
+                <p className="text-sm text-ninja-smoke mt-1">{jutsu.description}</p>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Bottom border and corner dots */}
-        <div className="absolute -bottom-4 left-8 right-8 pointer-events-none">
-          <div className="h-2 rounded-full bg-neutral-800 shadow-lg" />
+
+        <div className="mt-8 flex flex-col items-center">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-ninja-ember to-ninja-red flex items-center justify-center shadow-lg animate-glow">
+            <span className="font-ninja text-ninja-parchment text-xl font-bold">忍</span>
+          </div>
+          <p className="font-japanese text-ninja-smoke text-xs mt-2">Hidden Leaf Village</p>
         </div>
-        <div className="absolute -bottom-5 left-0 h-5 w-5 rounded-full border-2 border-neutral-800 bg-red-700 shadow-lg pointer-events-none" />
-        <div className="absolute -bottom-5 right-0 h-5 w-5 rounded-full border-2 border-neutral-800 bg-red-700 shadow-lg pointer-events-none" />
       </div>
     </div>
   );

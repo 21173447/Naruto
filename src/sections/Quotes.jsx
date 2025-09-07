@@ -63,11 +63,11 @@ const Quotes = () => {
     <div className="min-h-screen bg-gray-900 font-inter py-24 px-4 relative">
     
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 -left-32 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 -right-32 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 -left-32 w-64 h-64 bg-orange-500/10  blur-3xl"></div>
+        <div className="absolute bottom-1/3 -right-32 w-96 h-96 bg-purple-500/10  blur-3xl"></div>
       </div>
 
-      {/* Header */}
+
       <div className="max-w-6xl mx-auto text-center relative z-10 mb-16">
         <p className="text-orange-500 text-2xl mb-2">“”</p>
         <h2 className="text-5xl md:text-6xl font-bold text-orange-500 font-cinzel mb-4">
@@ -85,10 +85,10 @@ const Quotes = () => {
             className="bg-gray-800 border border-gray-700 rounded-xl p-8 relative overflow-hidden group hover:border-orange-500 transition-all duration-300 animate-scale-in"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
-            {/* Glow effect on hover */}
+    
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-            {/* Quote icon */}
+  
             <div className="absolute top-6 right-6 opacity-20 group-hover:opacity-40 transition-opacity duration-300">
               <Quote className="w-6 h-6 text-orange-500" />
             </div>
