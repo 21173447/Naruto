@@ -57,7 +57,7 @@ const NarutoHeader = ({ videoSrc }) => {
 
         <div className="text-center md:text-right animate-slide-up-fade">
           <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black uppercase tracking-tight mb-4">
-            <span className="block text-gradient-naruto hero-text-shadow">Naruto</span>
+            <span className="block text-orange-600">Naruto</span>
             <span className="block text-white hero-text-shadow -mt-4">Uzumaki</span>
           </h1>
         </div>

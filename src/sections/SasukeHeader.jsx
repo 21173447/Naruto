@@ -3,7 +3,7 @@ import sasukeVid from '../Videos/Clips of  Sasuke  For Editing 4K CC (twixtor).m
 
 const SasukeHeader = ({ videoSrc }) => {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden ">
       <video
         src={videoSrc || sasukeVid}
         autoPlay
@@ -56,7 +56,7 @@ const SasukeHeader = ({ videoSrc }) => {
 
         <div className="text-center md:text-right animate-slide-up-fade">
           <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black uppercase tracking-tight mb-4">
-            <span className="block text-gradient-purple hero-text-shadow">Sasuke</span>
+            <span className="block text-purple-950">Sasuke</span>
             <span className="block text-white hero-text-shadow -mt-4">Uchiha</span>
           </h1>
         </div>

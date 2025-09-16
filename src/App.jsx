@@ -5,6 +5,7 @@ import Characters from './sections/Characters'
 import Narutoheader from './sections/Narutoheader'
 import NarutoQuotes from './sections/Quotes'
 import SasukeHeader from './sections/SasukeHeader'
+import Space from './Components/Space'
 import Footer from './sections/Footer'
 
 function App() {
@@ -12,10 +13,16 @@ function App() {
   return (
     <>
   <Narutoheader />
-  <NarutoScroll/>
+
+ <Space/>
  < SasukeHeader />
+ 
+ <Space/>
  <NarutoQuotes/>
+ 
+ <Space/>
  <Characters/>
+   <NarutoScroll/>
  <Footer/>
 
     </>
