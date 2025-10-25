@@ -27,7 +27,9 @@
   100% { transform: translateY(-100%); }
 }
 .animate-scroll-credits {
-  animation: scroll-credits 60s linear infinite;
+  animation: scroll-credits 40s linear infinite;
+  animation-delay: 0s;
+  animation-fill-mode: both;
 }
 
 /* ------------------------- */

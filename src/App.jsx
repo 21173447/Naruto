@@ -1,5 +1,6 @@
 
 import './App.css'
+import Navbar from './Components/Navbar'
 import NarutoScroll from './Components/NarutoScroll'
 import Characters from './sections/Characters'
 import Narutoheader from './sections/Narutoheader'
@@ -12,19 +13,29 @@ function App() {
 
   return (
     <>
-  <Narutoheader />
+      <Navbar />
+      <div id="hero">
+        <Narutoheader />
+      </div>
 
- <Space/>
- < SasukeHeader />
- 
- <Space/>
- <NarutoQuotes/>
- 
- <Space/>
- <Characters/>
-   <NarutoScroll/>
- <Footer/>
-
+      <Space/>
+      <div id="sasuke">
+        <SasukeHeader />
+      </div>
+      
+      <Space/>
+      <div id="quotes">
+        <NarutoQuotes/>
+      </div>
+      
+      <Space/>
+      <div id="characters">
+        <Characters/>
+      </div>
+      <div id="scroll">
+        <NarutoScroll/>
+      </div>
+      <Footer/>
     </>
   )
 }
